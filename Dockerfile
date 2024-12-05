@@ -7,4 +7,7 @@ RUN apk -U upgrade && apk add --no-cache \
     ruby-dev \
     ruby-bundler
 
+COPY scripts/erber.rb /usr/local/bin/erber.rb
+RUN chmod a+x /usr/local/bin/erber.rb
+
 USER spacelift
